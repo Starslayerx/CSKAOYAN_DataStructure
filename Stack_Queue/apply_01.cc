@@ -9,14 +9,20 @@
  * -最后检测栈是否为空，若不空则全部出栈并加入后缀表达式
  */
 
+
 /*
  * 算法2: "通过后缀表达式计算值"
  * (王道介绍了一个直接计算中缀的算法但代码实现非常复杂，
- *  只推荐手算，不推荐用代码直接实现，
+ *  这个方法只推荐手算，不推荐用代码直接实现，尤其是涉及到括号时，
  *  还是转为后缀后再计算的代码更方便)
  *
  * 代码逻辑:
+ * -
+ * -
+ * -
+ * -
  */
+
 
 #include <iostream>
 #include <vector>
@@ -33,6 +39,22 @@ unordered_map<char, int> m = {{'(', -1},
                               {'/', 2}};
 
 // 中缀表达式转后缀表达式
+string trans(char fourm[]);
+
+// 通过后缀表达式计算结果
+double calculate(string suffix);
+
+int main()
+{
+    char forum1[100] = "a+b-a*((c+d)/e-f)+g";
+    char forum2[100] = "A+B-C*D/E+F";
+    char forum3[100] = "8+9-8*2/4+7";
+
+    cout << trans(forum3) << '\n';
+
+    return 0;
+}
+
 string trans(char fourm[])
 {
     string res = "";
@@ -76,16 +98,4 @@ string trans(char fourm[])
     }
 
     return res;
-}
-
-int main()
-{
-    char forum1[100] = "a+b-a*((c+d)/e-f)+g";
-    char forum2[100] = "A+B-C*D/E+F";
-    char forum3[100] = "8+9-8*2/4+7";
-
-    cout << trans(forum3) << '\n';
-
-
-    return 0;
 }
