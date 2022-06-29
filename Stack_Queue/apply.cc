@@ -65,6 +65,7 @@ int main()
 
     cout << trans(forum1) << '\n';
 
+
     return 0;
 }
 /*
